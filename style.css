@@ -1,0 +1,100 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .menu-item {
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .menu-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid #0077cc;
+    transition: transform 0.2s ease;
+  }
+  
+  .menu-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ① 貯蓄管理アプリ 用 CSS */
+  #addTableBtn {
+    margin: 8px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .savings-table {
+    border: 2px solid #0077cc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: #f0f8ff;
+  }
+  
+  .year-input {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .year-label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  .top-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+  .deleteTableBtn {
+    width: 80px;
+  }
+  
+  /* ② 資産管理アプリ 用 CSS */
+  #addBank {
+    font-weight: bold;
+    padding: 2px 4px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>メインメニュー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container main-menu">
+    <h1>メインメニュー</h1>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="child.png" alt="こども" id="childBtn" class="menu-img" />
+        <p>貯蓄管理アプリ</p>
+      </div>
+      <div class="menu-item">
+        <img src="grandpa.png" alt="おじいちゃん" id="grandpaBtn" class="menu-img" />
+        <p>資産管理アプリ</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('childBtn').addEventListener('click', () => {
+      location.href = 'child.html';
+    });
+    document.getElementById('grandpaBtn').addEventListener('click', () => {
+      location.href = 'grandpa.html';
+    });
+  </script>
+</body>
+</html>

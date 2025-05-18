@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>資産管理アプリ（おじいちゃん用）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>資産管理アプリ</h1>
+
+    <button id="addBank">銀行追加</button>
+    
+    <table id="assetTable">
+      <tr>
+        <th>銀行名</th>
+        <th>貯蓄額(円)</th>
+        <th>削除</th>
+      </tr>
+      <tr>
+        <td>
+          <select id="bankSelect">
+            <option value="三菱UFJ銀行">三菱UFJ銀行</option>
+            <option value="三井住友銀行">三井住友銀行</option>
+            <option value="みずほ銀行">みずほ銀行</option>
+            <option value="りそな銀行">りそな銀行</option>
+            <option value="楽天銀行">楽天銀行</option>
+            <option value="ゆうちょ銀行">ゆうちょ銀行</option>
+            <option value="積立NISA">積立NISA</option>
+          </select>
+        </td>
+        <td>
+          <input type="number" id="goalInput" value="0" />
+        </td>
+        <td>
+          <button id="firstDeleteBtn">🗑️</button>
+        </td>
+      </tr>
+    </table>
+    <h2>合計資産金額 : 0円</h2>
+  </div>
+
+  <script src="grandpa.js"></script>
+</body>
+</html>
