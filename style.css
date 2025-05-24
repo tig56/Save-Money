@@ -79,7 +79,7 @@ h1 {
 
 
   
-  /* ① 貯金管理アプリ 用 CSS */
+  /* ① 貯金管理アプリ */
   .container-items {
     max-width: 600px;
     margin: 0 auto;
@@ -144,7 +144,7 @@ h1 {
     width: 96px;
   }
   
-  /* ② 資産管理アプリ 用 CSS */
+  /* ② 資産管理アプリ */
   #addBank {
     font-weight: bold;
     padding: 2px 4px;
@@ -170,7 +170,7 @@ h1 {
 
 #assetTable th,
 #assetTable td {
-  border: 0.1px solid #ccc;
+  border: 1px solid #ccc;
   padding: 14px;
   font-size: 18px;
 }

@@ -3,6 +3,7 @@
 const table = document.getElementById('assetTable');
 const addBankBtn = document.getElementById('addBank');
 const totalDisplay = document.querySelector('h2');
+const tableBody = document.getElementById('assetTableBody');
 
 const BANK_OPTIONS = [
   "三菱UFJ銀行", "三井住友銀行", "みずほ銀行",
@@ -41,8 +42,7 @@ function addBankRow(data = null) {
   });
   tdDel.appendChild(delBtn);
   tr.appendChild(tdDel);
-
-  table.appendChild(tr);
+  tableBody.appendChild(tr); 
 
   input.addEventListener('input', () => {
     updateTotal();
