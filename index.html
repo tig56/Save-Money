@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>メインメニュー</title>
+  <title>お金の管理アプリ メインメニュー</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container main-menu">
-    <h1>メインメニュー</h1>
-    <div class="menu-items">
-      <div class="menu-item">
-        <img src="child.png" alt="こども" id="childBtn" class="menu-img" />
-        <p>貯蓄管理アプリ</p>
+    <h1>お金の管理アプリ<br>メインメニュー</h1>
+
+    <div class="card" id="childBtn">
+      <img src="child.png" alt="こども" class="card-img" />
+      <div class="card-text">
+        <h2 class="app-title">貯金管理アプリ</h2>
+        <p class="app-desc">目標額に向けた貯金を管理</p>
       </div>
-      <div class="menu-item">
-        <img src="grandpa.png" alt="おじいちゃん" id="grandpaBtn" class="menu-img" />
-        <p>資産管理アプリ</p>
+    </div>
+
+    <div class="card" id="grandpaBtn">
+      <img src="grandpa.png" alt="おじいちゃん" class="card-img" />
+      <div class="card-text">
+        <h2 class="app-title">資産管理アプリ</h2>
+        <p class="app-desc">総資産や運用状況を確認</p>
       </div>
     </div>
   </div>
@@ -31,3 +37,4 @@
   </script>
 </body>
 </html>
+

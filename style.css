@@ -1,54 +1,101 @@
 body {
-    font-family: sans-serif;
-    padding: 8px;
-    background: #f9f9f9;
-  }
+  font-family: "sans-serif";
+  margin: 0;
+  padding: 0;
+  background: #fdfcf9; 
+}
   
-  .container {
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: center;
+}
+  
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #333;
+}
+  
+.card {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: #f3ede5;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card-img {
+  width: 110px;
+  height: 110px;
+  margin-right: 16px;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.app-title {
+  margin: 0;
+  text-align: left;
+  font-size: 18px;
+  color: #006699;
+  font-weight: bold;
+}
+
+.app-desc {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+#childBtn {
+  border-color: #2bb673;
+}
+
+#grandpaBtn {
+  border-color: #337ab7;
+}
+
+#childBtn .app-title {
+  color: #2bb673;
+}
+
+#grandpaBtn .app-title {
+  color: #337ab7;
+}
+
+
+  
+  /* ① 貯金管理アプリ 用 CSS */
+  .container-items {
     max-width: 600px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  }
-  
-  h1 {
-    font-size: 24px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    background: #fffdf6;
     text-align: center;
-    margin-bottom: 20px;
   }
-  
-  .menu-items {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-  
-  .menu-item {
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .menu-img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 2px solid #0077cc;
-    transition: transform 0.2s ease;
-  }
-  
-  .menu-img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* ① 貯蓄管理アプリ 用 CSS */
+
   #addTableBtn {
     margin: 8px;
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  .button-wrapper {
+    text-align: left;
   }
   
   table {
@@ -69,12 +116,12 @@ body {
     min-width: 60px;
   }
   
-  .savings-table {
-    border: 2px solid #0077cc;
+  .savings-childtable {
+    border: 2px solid #2bb673;
     padding: 10px;
     margin: 0 auto 20px;
     border-radius: 8px;
-    background: #f0f8ff;
+    background: #e6f4ec;
   }
   
   .year-input {
@@ -105,5 +152,33 @@ body {
   }
 
   #assetTable {
-    margin: 0 auto;       
+    width: 100%;
+    margin: 0;     
+    border-collapse: collapse;   
   }
+
+  .savings-grandpatable {
+    border: 2px solid #0077cc;
+    padding: 10px;
+    margin: 8px auto;
+    border-radius: 8px;
+    background: #e6f3fc;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+#assetTable th,
+#assetTable td {
+  border: 0.1px solid #ccc;
+  padding: 14px;
+  font-size: 18px;
+}
+
+  h2 {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+    color: #0077cc;
+  }
+

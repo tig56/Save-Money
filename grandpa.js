@@ -9,11 +9,9 @@ const BANK_OPTIONS = [
   "りそな銀行", "楽天銀行", "ゆうちょ銀行", "積立NISA"
 ];
 
-// 銀行の行を追加
 function addBankRow(data = null) {
   const tr = document.createElement('tr');
 
-  // 銀行名セル
   const tdBank = document.createElement('td');
   const select = document.createElement('select');
   BANK_OPTIONS.forEach(b => {
@@ -26,7 +24,6 @@ function addBankRow(data = null) {
   tdBank.appendChild(select);
   tr.appendChild(tdBank);
 
-  // 金額セル
   const tdAmount = document.createElement('td');
   const input = document.createElement('input');
   input.type = 'number';
@@ -34,7 +31,6 @@ function addBankRow(data = null) {
   tdAmount.appendChild(input);
   tr.appendChild(tdAmount);
 
-  // 削除セル
   const tdDel = document.createElement('td');
   const delBtn = document.createElement('button');
   delBtn.textContent = "🗑️";
@@ -48,7 +44,6 @@ function addBankRow(data = null) {
 
   table.appendChild(tr);
 
-  // 入力値が変わったら合計更新
   input.addEventListener('input', () => {
     updateTotal();
     saveData();
@@ -62,7 +57,7 @@ function updateTotal() {
   let total = 0;
   const rows = table.querySelectorAll('tr');
   rows.forEach((row, i) => {
-    if(i === 0) return; // ヘッダー行はスキップ
+    if(i === 0) return; 
     const input = row.querySelector('input[type="number"]');
     total += Number(input.value) || 0;
   });
@@ -85,7 +80,7 @@ function loadData() {
   const saved = localStorage.getItem('grandpaAssets');
   if(!saved) return;
   const data = JSON.parse(saved);
-  // 既存行は1行のみ。初期行は削除して再生成
+
   while(table.rows.length > 1) {
     table.deleteRow(1);
   }

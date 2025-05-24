@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+  <div class="container-items">
     <h1>資産管理アプリ</h1>
-
-    <button id="addBank">銀行追加</button>
-    
-    <table id="assetTable">
+    <div class="button-wrapper">
+      <button id="addBank">銀行追加</button>
+    </div>
+    <div class="savings-grandpatable">
+      <table id="assetTable">
       <tr>
         <th>銀行名</th>
         <th>貯蓄額(円)</th>
@@ -38,6 +39,8 @@
         </td>
       </tr>
     </table>
+    </div>
+    
     <h2>合計資産金額 : 0円</h2>
   </div>
 

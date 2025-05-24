@@ -15,7 +15,7 @@ addTableBtn.addEventListener('click', () => createSavingsTable());
 
 function createSavingsTable(data = null, index = Date.now()) {
   const wrapper = document.createElement('div');
-  wrapper.classList.add('savings-table');
+  wrapper.classList.add('savings-childtable');
   wrapper.dataset.id = index;
 
   const topBar = document.createElement('div');
@@ -55,7 +55,7 @@ function createSavingsTable(data = null, index = Date.now()) {
   <tbody>
     <tr>
       <td><select class="bankSelect">${bankOptions.map(b => `<option value="${b}">${b}</option>`).join('')}</select></td>
-      <td><input type="number" class="goalTotalInput" value="0"></td>
+      <td class="goalTotalCell">0</td> 
       <td class="totalResult">0</td>
       <td class="difference">0</td>
     </tr>
@@ -116,7 +116,7 @@ function createSavingsTable(data = null, index = Date.now()) {
   wrapper.appendChild(tableMonth);
   container.appendChild(wrapper);
 
-  const goalTotalInput = wrapper.querySelector('.goalTotalInput');
+  const goalTotalCell = wrapper.querySelector('.goalTotalCell');
   const totalResultCell = wrapper.querySelector('.totalResult');
   const differenceCell = wrapper.querySelector('.difference');
   const bankSelect = wrapper.querySelector('.bankSelect');
@@ -140,7 +140,7 @@ function createSavingsTable(data = null, index = Date.now()) {
       totalResult += r;
     });
 
-    goalTotalInput.value = totalGoal;
+    goalTotalCell.textContent = totalGoal.toLocaleString();
     totalResultCell.textContent = totalResult.toLocaleString();
 
     const diff = totalResult - totalGoal;
@@ -158,7 +158,7 @@ function createSavingsTable(data = null, index = Date.now()) {
 }
 
 function saveData() {
-  const allTables = container.querySelectorAll('.savings-table');
+  const allTables = container.querySelectorAll('.savings-childtable');
   const saveArray = [];
 
   allTables.forEach(table => {
